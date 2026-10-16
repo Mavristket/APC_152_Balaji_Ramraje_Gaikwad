@@ -1,0 +1,11 @@
+Patient_ID,Name,Age,Gender,Disease,Medical_Expense
+P101,Ramesh Gupta,65,Male,Diabetes,45000
+P102,Shanti Devi,72,Female,Hypertension,58000
+P103,Arjun Kapoor,35,Male,Asthma,22000
+P104,Leela Roy,68,Female,Arthritis,64000
+P105,Suresh Raina,54,Male,Diabetes,38000
+P106,Meenakshi Sundaram,61,Female,Heart Disease,95000
+P107,Gaurav Sharma,29,Male,Viral Fever,12000
+P108,Kamla Nehru,75,Female,Hypertension,52000
+P109,Tushar Kulkarni,45,Male,Asthma,31000
+P110,Anand Mohan,63,Male,Diabetes,54000
