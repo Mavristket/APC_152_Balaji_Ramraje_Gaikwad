@@ -1,0 +1,87 @@
+SORTING ALGORITHM RACE: BENCHMARK REPORT
+===========================================
+Random seed: 42
+Input sizes: 100, 500, 1000, 2000, 5000
+Input shapes: random, already sorted, reversed, nearly sorted, many duplicates
+Timing: median of 5 runs; time.perf_counter()
+Correctness: every output compared with Python sorted(input)
+Bubble and insertion sort are skipped above n=5000.
+
+EMPIRICAL GROWTH EXPONENTS
+Time is approximately proportional to n^exponent.
+Python sorted on already sorted: n^0.86
+Python sorted on many duplicates: n^1.11
+Python sorted on nearly sorted: n^1.01
+Python sorted on random: n^1.25
+Python sorted on reversed: n^0.91
+bubble on already sorted: n^1.11
+bubble on many duplicates: n^2.00
+bubble on nearly sorted: n^2.37
+bubble on random: n^2.05
+bubble on reversed: n^2.12
+heap on already sorted: n^1.20
+heap on many duplicates: n^1.12
+heap on nearly sorted: n^1.25
+heap on random: n^1.21
+heap on reversed: n^1.20
+insertion on already sorted: n^1.12
+insertion on many duplicates: n^1.98
+insertion on nearly sorted: n^1.81
+insertion on random: n^2.05
+insertion on reversed: n^2.09
+merge on already sorted: n^1.13
+merge on many duplicates: n^1.05
+merge on nearly sorted: n^1.17
+merge on random: n^1.12
+merge on reversed: n^1.17
+quick on already sorted: n^1.14
+quick on many duplicates: n^1.14
+quick on nearly sorted: n^1.14
+quick on random: n^1.13
+quick on reversed: n^1.18
+
+RANKINGS AT LARGEST SIZE (n=5000)
+Lower median time is faster.
+
+Random:
+1. Python sorted: 0.00039340 seconds
+2. merge: 0.00740010 seconds
+3. quick: 0.00803190 seconds
+4. heap: 0.01098300 seconds
+5. insertion: 0.46262360 seconds
+6. bubble: 1.04285710 seconds
+
+Already Sorted:
+1. Python sorted: 0.00002040 seconds
+2. bubble: 0.00025480 seconds
+3. insertion: 0.00042940 seconds
+4. merge: 0.00703820 seconds
+5. quick: 0.00802110 seconds
+6. heap: 0.01043980 seconds
+
+Reversed:
+1. Python sorted: 0.00010270 seconds
+2. merge: 0.00822290 seconds
+3. heap: 0.00995020 seconds
+4. quick: 0.01010200 seconds
+5. insertion: 0.89205940 seconds
+6. bubble: 1.38662670 seconds
+
+Nearly Sorted:
+1. Python sorted: 0.00006110 seconds
+2. merge: 0.00708150 seconds
+3. quick: 0.00811910 seconds
+4. insertion: 0.00982470 seconds
+5. heap: 0.01263500 seconds
+6. bubble: 0.60292710 seconds
+
+Many Duplicates:
+1. Python sorted: 0.00033230 seconds
+2. quick: 0.00386330 seconds
+3. merge: 0.00861190 seconds
+4. heap: 0.01072940 seconds
+5. insertion: 0.46591320 seconds
+6. bubble: 1.07074120 seconds
+
+Detailed measurements are in results.csv (150 rows).
+The corresponding log-log plot is sorting_race.png.
